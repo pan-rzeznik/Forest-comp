@@ -1,0 +1,31 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-row: 1/2;
+    background: linear-gradient(to bottom, rgba(51, 0, 146, 0.76), rgba(17, 0, 41, 0.66)), url('../img/header-bg.jpeg') no-repeat fixed center/cover;
+
+    &__text-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: $main-width;
+        height: 70%;
+        margin: 5rem auto;
+        padding: 0 3rem;
+        text-align: center;
+        color: $white-color;
+
+        h1 {
+            margin: 0;
+            font-weight: 300;
+            font-size: 4rem;
+        }
+
+        p {
+            padding: 0 5rem;
+            margin-bottom: 5rem;
+        }
+    }
+}

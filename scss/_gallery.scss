@@ -1,0 +1,41 @@
+.gallery {
+    grid-row: 3/4;
+    padding-bottom: 0;
+    
+    h3 {
+        text-align: center;
+        margin: 0 0 5rem 0;
+        padding: 0 2rem;
+        font-weight: 500;
+
+    }
+
+    &__box {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
+        background-color: black;
+        overflow: hidden;
+       
+        .img__box {
+            width: 100%;
+            height: 100%;
+            transition: .5s all;
+            filter: grayscale(1);
+            overflow: hidden;
+            
+    
+            &:hover {
+                opacity: 1;
+                filter: grayscale(0) contrast(1.1);
+            }
+    
+            img {
+                
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+
+    
+}

@@ -1,0 +1,69 @@
+.crew {
+    grid-row: 2/3;
+    background: linear-gradient(to bottom, rgba(51, 0, 146, 0.575), rgba(17, 0, 41, 0.452)), url('../img/team-bg2.jpeg') no-repeat fixed center/cover;
+    color: $white-color;
+
+    h2 {
+        color: $white-color;
+        
+        &::after {
+            background-color: $white-color;
+        }
+    }
+
+    h3 {
+        text-align: center;
+        margin: 0 0 5rem 0;
+        padding: 0 2rem;
+        font-weight: 500;
+
+    }
+
+
+    &__members {
+        padding: 0 5rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(27.5rem, 1fr));
+        justify-content: center;
+
+        .member {
+            padding: 3rem 2.5rem;
+            justify-self: center;
+
+            &__img-box {
+                width: 70%;
+                margin: 0 auto;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 1.5rem;
+                }
+            }
+
+            h4 {
+                margin: 1rem 0 0 0;
+                text-align: center;
+                font-size: 2rem;
+            }
+
+            p {
+                margin: 0;
+                text-align: center;
+            }
+        }
+    }
+
+    .recruitment {
+        margin: 3rem 2rem 0 2rem;
+        padding: 2rem 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        p {
+            text-align: center;
+            margin: 0 0 3rem 0;
+        }
+    }
+}
