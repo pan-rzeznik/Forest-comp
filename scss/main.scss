@@ -22,11 +22,13 @@ body {
     font-size: 1.6rem;
     font-weight: 400;
     line-height: 1.6;
+    position: relative;
 }
 
 .page-container {
     display: grid;
     grid-template-rows: minmax(min-content, 70vh) min-content;
+
 }
 
 main {

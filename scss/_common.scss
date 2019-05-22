@@ -5,6 +5,17 @@
         padding-bottom: 5rem;
     }
 
+    .fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        margin: 0 auto;
+        z-index: 999;
+        background-color: rgb(255, 255, 255);
+        color: $dark-grey-color;
+    }
+
     .btn {
         text-decoration: none;
         display: inline-block;

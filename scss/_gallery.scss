@@ -1,7 +1,7 @@
 .gallery {
     grid-row: 3/4;
     padding-bottom: 0;
-    
+
     h3 {
         text-align: center;
         margin: 0 0 5rem 0;
@@ -12,7 +12,7 @@
 
     &__box {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
         background-color: black;
         overflow: hidden;
        
@@ -28,14 +28,28 @@
                 opacity: 1;
                 filter: grayscale(0) contrast(1.1);
             }
+
+            &:hover img {
+                transform: scale(1);
+            }
     
             img {
-                
+                transition: 1s all;
+                transform: scale(1.1);
                 height: 100%;
                 width: 100%;
             }
         }
-    }
+    }  
+}
 
-    
+@media (max-width:900px) {
+    .gallery {
+        &__box {
+
+            .img__box {
+                width: 100%;
+            }
+        }
+    }
 }

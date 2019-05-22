@@ -80,3 +80,44 @@
         }
     }
 }
+
+@media (max-width: 670px) {
+    .footer {
+        &__container {
+            
+            & > * {
+                text-align: center;
+                margin: 2rem 2rem;
+            }
+            .describe {
+                width: 100%;
+                padding: 0 2rem;
+            }
+            .address {
+                width: 100%;
+            }
+            .social-media {
+                width: 100%;
+
+                .form {
+                    padding: 0 5rem;
+                    label {
+                        font-size: 1.2rem;
+                        opacity: .7;
+                    }
+    
+                    input[type=text] {
+                        width: 75%;
+                        margin-bottom: 2rem;
+                        
+                    }
+                }
+                
+                .social-icos {
+                    margin-top: 2rem;
+                    justify-content: center;
+                }
+            }
+    }
+}
+}

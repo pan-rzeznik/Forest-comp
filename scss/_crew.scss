@@ -67,3 +67,29 @@
         }
     }
 }
+
+@media (max-width:1200px) {
+    .crew {
+        &__members {
+            grid-template-columns: repeat(auto-fit, minmax(37rem, 1fr));
+        }
+    }
+}
+
+
+@media (min-width:2100px) {
+    .crew {
+        &__members {
+            grid-template-columns: repeat(auto-fit, minmax(37rem, 1fr));
+           
+            .member {
+
+                &__img-box {
+                    width: 50%;
+                    margin: 0 auto;
+            }
+            
+        }
+    }
+    }
+}
