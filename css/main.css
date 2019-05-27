@@ -271,6 +271,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  scroll-snap-align: center;
 }
 
 .footer__container {
@@ -465,6 +466,7 @@
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1/2;
+  scroll-snap-align: center;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(51, 0, 146, 0.76)), to(rgba(17, 0, 41, 0.66))), url("../img/header-bg.jpeg") no-repeat fixed center/cover;
   background: linear-gradient(to bottom, rgba(51, 0, 146, 0.76), rgba(17, 0, 41, 0.66)), url("../img/header-bg.jpeg") no-repeat fixed center/cover;
 }
@@ -561,11 +563,55 @@
   opacity: .5;
 }
 
+.sticky-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: white;
+  -webkit-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.521);
+          box-shadow: 0 0 1rem rgba(0, 0, 0, 0.521);
+  margin-top: 0;
+  max-width: unset;
+  width: 100%;
+  -webkit-transition: .5s background-color;
+  transition: .5s background-color;
+}
+
+.sticky-nav label {
+  margin-right: 3rem;
+}
+
+.sticky-nav .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-right: 5rem;
+}
+
+.sticky-nav .menu__list {
+  list-style: none;
+}
+
+.sticky-nav .menu__list__item:hover > a {
+  opacity: 1;
+}
+
+.sticky-nav .menu__list__item a {
+  color: #313131;
+}
+
 @media (max-width: 890px) {
   .navbar label {
     z-index: 1000;
     position: relative;
     display: inline-block;
+    color: #313131;
+    mix-blend-mode: difference;
   }
   .navbar #toggler:checked + .menu {
     position: absolute;
@@ -593,6 +639,9 @@
   }
   .navbar #toggler:checked + .menu .menu__list .menu__list__item {
     margin: 0;
+  }
+  .navbar #toggler:checked + .menu .menu__list .menu__list__item a {
+    color: #fff;
   }
   .navbar .menu {
     position: fixed;

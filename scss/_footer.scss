@@ -3,6 +3,7 @@
     color: $white-color;
     display: flex;
     justify-content: center;
+    scroll-snap-align: center;
 
     &__container {
         max-width: $main-width;
