@@ -575,8 +575,14 @@
   margin-top: 0;
   max-width: unset;
   width: 100%;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
   -webkit-transition: .5s background-color;
   transition: .5s background-color;
+  -webkit-animation: fade-in 1s;
+          animation: fade-in 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 
 .sticky-nav label {
@@ -646,6 +652,28 @@
   .navbar .menu {
     position: fixed;
     display: none;
+  }
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 

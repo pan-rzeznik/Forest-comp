@@ -69,7 +69,10 @@
     margin-top: 0;
     max-width: unset;
     width: 100%;
+    transform: translateY(-100%);
     transition: .5s background-color;
+    animation: fade-in 1s;
+    animation-fill-mode: both;
 
     label {
         margin-right: 3rem;
@@ -142,5 +145,14 @@
             position: fixed;
             display: none;
         }
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        transform: translateY(-100%)
+    }
+    100% {
+        transform: translateY(0);
     }
 }

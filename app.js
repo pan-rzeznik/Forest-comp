@@ -6,7 +6,7 @@ let navbar = document.querySelector('.navbar');
 
 
 function checkPosition() {
-    if(window.pageYOffset >= 580){
+    if(window.pageYOffset >= 572){
         navbar.classList.add('sticky-nav');
     }else {
         navbar.classList.remove('sticky-nav');
