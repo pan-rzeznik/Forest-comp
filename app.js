@@ -16,3 +16,4 @@ function checkPosition() {
 window.onscroll = ()=> {
     checkPosition();
 }
+
