@@ -1,3 +1,6 @@
+import  SmoothScroll  from "smooth-scroll";
+import '../scss/main.scss'
+
 const scroll = new SmoothScroll('.navbar a[href*="#"]', {
     speed: 400
 });
@@ -17,3 +20,5 @@ window.onscroll = ()=> {
     checkPosition();
 }
 
+const damianm = `damian`
+console.log(damianm);
