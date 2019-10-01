@@ -79,13 +79,9 @@
                
             }
         }
-    }
-}
 
-@media (max-width: 670px) {
-    .footer {
-        &__container {
-            
+        @media (max-width: 670px) {
+
             & > * {
                 text-align: center;
                 margin: 2rem 2rem;
@@ -119,6 +115,6 @@
                     justify-content: center;
                 }
             }
+        }
     }
-}
 }

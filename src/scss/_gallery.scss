@@ -15,6 +15,10 @@
         grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
         background-color: black;
         overflow: hidden;
+
+        @media(max-width: 500px) {
+            grid-template-columns: 1fr;
+        }
        
         .img__box {
             width: 100%;
@@ -22,8 +26,7 @@
             transition: .5s all;
             filter: grayscale(1);
             overflow: hidden;
-            
-    
+
             &:hover {
                 opacity: 1;
                 filter: grayscale(0) contrast(1.1);
@@ -41,15 +44,4 @@
             }
         }
     }  
-}
-
-@media (max-width:900px) {
-    .gallery {
-        &__box {
-
-            .img__box {
-                width: 100%;
-            }
-        }
-    }
 }

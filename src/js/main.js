@@ -1,24 +1,24 @@
 import  SmoothScroll  from "smooth-scroll";
 import '../scss/main.scss'
+import './lazyLoadingGallery'
 
 const scroll = new SmoothScroll('.navbar a[href*="#"]', {
-    speed: 400
+    speed: 800,
+    offset: 77
 });
 
 let navbar = document.querySelector('.navbar');
+let hero = document.querySelector('.header');
 
-
-function checkPosition() {
-    if(window.pageYOffset >= 572){
-        navbar.classList.add('sticky-nav');
-    }else {
+const heroSection = new IntersectionObserver((entries,observe) => {
+    if(entries[0].isIntersecting) {
         navbar.classList.remove('sticky-nav');
+    } 
+    else {
+        navbar.classList.add('sticky-nav');
     }
-}
+}, {
+    rootMargin: "-80px"
+})
 
-window.onscroll = ()=> {
-    checkPosition();
-}
-
-const damianm = `damian`
-console.log(damianm);
+heroSection.observe(hero);
